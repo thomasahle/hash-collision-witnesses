@@ -1,4 +1,4 @@
-/* mx3: adapted for this package from heur2_scratch/verify-mx3/mymx3.h and construct.c.
+/* mx3: adapted for this package from experiment/verify-mx3/mymx3.h and construct.c.
  * The supplied independent verifier/driver is credited here;
  * adaptations: standalone C11 driver, explicit LE loads, asserted
  * SMHasher3 values and witnesses, single-thread deterministic sampling. */

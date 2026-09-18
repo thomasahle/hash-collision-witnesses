@@ -1,4 +1,4 @@
-/* pengyhash: adapted for this package from heur2_scratch/verify-pengyhash/pengy_own.h and its verifier.
+/* pengyhash: adapted for this package from experiment/verify-pengyhash/pengy_own.h and its verifier.
  * The supplied independent verifier/driver is credited here;
  * adaptations: standalone C11 driver, explicit LE loads, asserted
  * SMHasher3 values and witnesses, single-thread deterministic sampling. */

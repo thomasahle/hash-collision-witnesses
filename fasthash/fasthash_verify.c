@@ -1,4 +1,4 @@
-/* fasthash: adapted for this package from heur2_scratch/verify-fasthash/vf.c and mine/vfh.c.
+/* fasthash: adapted for this package from experiment/verify-fasthash/vf.c and mine/vfh.c.
  * The supplied independent verifier/driver is credited here;
  * adaptations: standalone C11 driver, explicit LE loads, asserted
  * SMHasher3 values and witnesses, single-thread deterministic sampling. */

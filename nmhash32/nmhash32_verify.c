@@ -1,4 +1,4 @@
-/* nmhash32: adapted for this package from heur2_scratch/verify-nmhash32/own_x28/own_nmhash.h; NMHASH32 trail also independently checked in verify-nmhash32/nm.h.
+/* nmhash32: adapted for this package from experiment/verify-nmhash32/own_x28/own_nmhash.h; NMHASH32 trail also independently checked in verify-nmhash32/nm.h.
  * The supplied independent verifier/driver is credited here;
  * adaptations: standalone C11 driver, explicit LE loads, asserted
  * SMHasher3 values and witnesses, single-thread deterministic sampling. */

@@ -1,4 +1,4 @@
-/* mir: adapted for this package from heur2_scratch/verify-mir/fable_71582/fmir.h and fderive.py; 16-byte case from verify-mir/README.md.
+/* mir: adapted for this package from experiment/verify-mir/fable_71582/fmir.h and fderive.py; 16-byte case from verify-mir/README.md.
  * The supplied independent verifier/driver is credited here;
  * adaptations: standalone C11 driver, explicit LE loads, asserted
  * SMHasher3 values and witnesses, single-thread deterministic sampling. */
