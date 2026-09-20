@@ -2,7 +2,7 @@
 #
 #   make             build every directory's program in place (same as `make all`)
 #   make check       run every program with 2^20 seeds and compare the collision counts it
-#                    prints with the "make check reference" table in README.md
+#                    prints with the "make check reference" table in CHECKS.md
 #   make clean       remove the binaries
 #
 # Variables: CC, CFLAGS, LDLIBS as usual.  DIRS=<subset> restricts all/check/clean to those
@@ -107,7 +107,7 @@ check: all
 	    pengyhash|nmhash32|nmhash32x|mx3|mir|fasthash|mum|rapidhash-v3|wyhash|rapidhash-v1|xxh3-64|xxh3-128|dotnet-marvin|abseil-hash) key='collisions = [0-9]+' ;; \
 	    *) echo "FAIL  $$d: no count pattern in the Makefile"; fail=1; continue ;; \
 	  esac; \
-	  row=$$(awk -F'|' -v d="$$d" '$$2 ~ ("^ *`" d "` *$$") && $$3 ~ "^ *`[.]/" { print; exit }' README.md); \
+	  row=$$(awk -F'|' -v d="$$d" '$$2 ~ ("^ *`" d "` *$$") && $$3 ~ "^ *`[.]/" { print; exit }' CHECKS.md); \
 	  if [ -z "$$row" ]; then echo "FAIL  $$d: no row in the README check table"; fail=1; continue; fi; \
 	  run=$$(printf '%s\n' "$$row" | awk -F'|' '{ gsub(/`/, "", $$3); gsub(/^ +| +$$/, "", $$3); print $$3 }'); \
 	  want=$$(printf '%s\n' "$$row" | awk -F'|' '{ gsub(/`/, "", $$4); gsub(/^ +| +$$/, "", $$4); print $$4 }'); \
@@ -123,7 +123,7 @@ check: all
 	    echo "FAIL  $$d: expected [$$want], got [$$got] (tolerance $(CHECK_TOL))"; fail=1; \
 	  fi; \
 	done; \
-	if [ $$fail -eq 0 ]; then echo "make check: every program reproduces the README counts"; else echo "make check: FAILED"; fi; \
+	if [ $$fail -eq 0 ]; then echo "make check: every program reproduces the CHECKS.md counts"; else echo "make check: FAILED"; fi; \
 	exit $$fail
 
 clean:
