@@ -12,7 +12,7 @@ The Makefile parses the table below: directory in column 1, the command (startin
 | `komihash` | `./komihash_pair 20` | `954642 674611 280031 0` |
 | `murmurhash3-128` | `./murmurhash3_128_verify 20` | `1048576 0 1048576 0 1048576` |
 | `museair` | `./museair_verify 20` | `1048576 1048576 1048576 1048576 1048576 1048576 1048576 1048576 0` |
-| `rust-ahash` | `./ahash_pairs 20` | `0 2 0 2 1 0 1 2 0 0` |
+| `rust-ahash` | `./ahash_pairs 20` | `217 0 0 2 0 2 1 0 1 2 0 0` |
 | `spookyhash2-64` | `./spookyhash2_64_pair 20` | `524207 524207 524369 524369 1048576 524103 524103 524103` |
 | `t1ha2-64` | `./t1ha2_64_verify 20` | `0 57150 0 65785 0 65084` |
 | `pengyhash` | `./pengyhash_verify 20` | `1048576 1048576` |
@@ -48,7 +48,7 @@ What the counts are:
 * `murmurhash3-128`: pair 1, its control, pair 2, its control, the 4-way multicollision.
 * `museair`: the 17-byte pair in the four variants, the 24-byte pair in the four variants, the
   control (0 of 4096).
-* `rust-ahash`: A_2, A_1, B_0, historical A, fallback B; each in rs4 then correlated smh models.
+* `rust-ahash`: E, A_2, A_1, B_0, historical A, fallback B; each in rs4 then correlated smh models.
 * `spookyhash2-64`: pair 1 64-bit and 128-bit, pair 2 64-bit and 128-bit, seeds on which the
   bit-63 predictor was right (all); then selected 275-byte pair at 32, 64 and 128 bits.
 * `t1ha2-64`: selected F60, historical A, historical B; each uniform then class.
